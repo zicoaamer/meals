@@ -1,0 +1,115 @@
+/*Css Variables*/
+
+/*Start Global*/
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #0d0d0d !important;
+    color: white !important;
+}
+.clickable{
+    cursor: pointer !important;
+}
+.backColor{
+    background-color: #0d0d0d !important;
+    color: white !important;
+}
+.top100{
+    top: 100px;
+}
+.hide {
+    display: none;
+}
+/*End Global*/
+/*Start Loading*/
+.loadingPage{
+    z-index: 9999999999;
+    background-color: #000;
+}
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+  
+/*End Loading*/
+/*Start leftSide*/
+.leftSide{
+    background-color: white;
+    left: -300px;
+    z-index: 99999;
+}
+.leftSide .hiddenItems ul li{
+    transition: padding-left 0.6s ease-in-out;
+}
+.leftSide .hiddenItems ul li:hover{
+    padding-left: 20px;
+    transition: padding-left 0.6s ease-in-out;
+}
+.drawer{
+    width: 80px !important;
+}
+.hiddenItems{
+    width: 300px !important;
+}
+
+/*End leftSide*/
+/*Start Main Content*/
+.boxImage{
+    border: 7px;
+    overflow: hidden;
+}
+.boxImage .boxContent{
+    position: absolute;
+    top: 150%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 7px;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+}
+
+.boxImage:hover .boxContent{
+    top: 0;
+}
+/*ُEnd Main Content*/
+.search input::placeholder , .search input {
+    color: #fff !important;
+}

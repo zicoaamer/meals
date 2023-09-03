@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/logo.png">
+  <title>Yummy</title>
+  <!-- Bootstrap Css File -->
+  <link rel="stylesheet" href="Css/bootstrap.min.css">
+  <!-- font awesome Css File -->
+  <link rel="stylesheet" href="Css/all.min.css">
+  <!-- Main Css File -->
+  <link rel="stylesheet" href="Css/main.css">
+</head>
+<body>
+  <div class="loadingPage position-fixed top-0 start-0 end-0 bottom-0">
+    <div class="lds-ring position-absolute top-50 start-50 translate-middle">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div class="leftSide position-fixed top-0 bottom-0 d-flex">
+    <div class="hiddenItems backColor py-4">
+      <div class="container h-100 d-flex flex-column justify-content-between">
+        <div class="menuList">
+          <ul class="list-unstyled px-3">
+            <li class="goToHome py-2 position-relative clickable top100">Home</li>
+            <li class="goToSearch py-2 position-relative clickable top100">Search</li>
+            <li class="goToCat py-2 position-relative clickable top100">Categories</li>
+            <li class="goToArea py-2 position-relative clickable top100">Area</li>
+            <li class="goTOIng py-2 position-relative clickable top100">Ingredients</li>
+            <li class="goToContact py-2 position-relative clickable top100">Contact Us</li>
+        </ul>
+        </div>
+        <div class="footer">
+          <div class="icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="copyright">
+              <p>Copyright zicoaamer© 2023 All Rights <br>Reserved.</p>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="drawer d-flex flex-column justify-content-between h-100 py-4 align-items-center">
+      <div class="logo w-50"><img class="w-100 clickable" src="images/logo.png" alt="Main Logo"></div>
+      <div class="menuIcon clickable"><i class="fa-solid open-close-icon fa-2xl fa-align-justify text-black"></i></div>
+      <div class="share">
+        <i class="clickable fa-solid fa-globe d-block text-black"></i>
+        <i class="clickable fa-solid fa-share-nodes text-black"></i>
+      </div>
+    </div>
+  </div>
+  <!-- Search Area -->
+  <div class="search hide">
+    <div class="container w-75">
+      <div class="row py-4 ">
+        <div class="col-md-6 ">
+            <input onkeyup="searchName(this.value)" class="form-control bg-transparent" type="text" placeholder="Search By Name">
+        </div>
+        <div class="col-md-6">
+            <input onkeyup="searchLetter(this.value)" class="form-control bg-transparent " maxlength="1" type="text" placeholder="Search By First Letter">
+        </div>
+    </div>
+    </div>
+  </div>
+  <!-- Change Between All Content -->
+  <div class="mainContent">
+    <div class="container ps-4 py-5">
+      <div class="row gy-4" id="allData">
+      </div>
+    </div>
+  </div>
+  <!-- Contact US -->
+  <div class="contact hide">
+    <div class="container d-flex flex-column justify-content-center align-content-center">
+      <div class="row g-4">
+        <div class="col-md-6">
+            <input id="nameId" onkeyup="inputsValidation()" placeholder="Enter Your Name" type="text" class="form-control">
+            <div id="nameWarn" class="alert alert-danger w-100 mt-2 d-none">
+                Special characters and numbers not allowed
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input id="emailId" onkeyup="inputsValidation()" placeholder="Enter Your Email" type="email" class="form-control">
+            <div id="emailWarn" class="alert alert-danger w-100 mt-2 d-none">
+                Email is not valid *mail@example.com
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input id="numberId" onkeyup="inputsValidation()" placeholder="Enter Your Phone" type="number" class="form-control">
+            <div id="numberWarn" class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid Phone Number
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input id="ageId" onkeyup="inputsValidation()" placeholder="Enter Your Age" type="number" class="form-control">
+            <div id="ageWarn" class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid age
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input id="passId" onkeyup="inputsValidation()" placeholder="Enter Your Password" type="password" class="form-control">
+            <div id="passWarn" class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid password *Minimum eight characters, at least one letter and one number:*
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input id="repassId" onkeyup="inputsValidation()" type="password" class="form-control" placeholder="Re-password">
+            <div id="rePassWarn" class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid repassword 
+            </div>
+        </div>
+      </div>
+      <div class="row mt-3 text-center">
+        <div class="col justify-text-center"><button onclick="passingData()" class="btn btn-danger" type="submit" disabled>Submit</button></div>
+      </div>
+      <div class="row mt-3 text-center">
+        <div class="col justify-text-center hide dataIsCorrect"><p class="text-success">Done, Data is correct and passed!</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap Js File -->
+  <script src="Js/bootstrap.bundle.min.js"></script>
+  <!-- JQuery File -->
+  <script src="Js/jQuery.min.js"></script>
+  <!-- Main Js File -->
+  <script src="Js/main.js"></script>
+</body>
+</html>
